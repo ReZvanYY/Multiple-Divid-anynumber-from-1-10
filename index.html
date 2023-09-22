@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>For Loop oppgave.</title>
+    <style>
+        .container {
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="countainer">
+    <input id="input" type="number">
+    <button onclick="multipleList()">Multiple 1-10</button>
+    <button onclick="divideList()">Divide 1-10</button>
+</div>
+<div id="numbers"></div>
+
+    <script>
+        let html = document.getElementById('numbers');
+        let stopValue = 10;
+        
+        function multipleList() {
+            let inputNumber = document.getElementById('input').value;
+            html.innerHTML='';
+
+            for (let counter = 1; counter <= stopValue; counter++) {
+                html.innerHTML += '<li>' + inputNumber * counter + '</li>';
+            }
+        }
+        function divideList() {
+            let inputNumber = document.getElementById('input').value;
+            html.innerHTML='';
+
+            for (let counter = 1; counter <= stopValue; counter++) {
+                html.innerHTML += '<li>' + inputNumber / counter + '</li>';
+            }
+        }
+        
+    </script>
+
+
+</body>
+
+</html>
